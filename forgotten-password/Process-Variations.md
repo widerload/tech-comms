@@ -2,9 +2,60 @@
 
 ## Flow Chart
 
-The overall flow chart for the forgotten password process looks like this. This is very complicated but all of these options are used by platforms large and small. Different platforms will use different options, but generally it looks something like this.
+The overall flow chart for the forgotten password process looks like this. This is very complicated and i have created a 'simplified' version in addition to a 'full' version, but all of these options are used by platforms large and small. Different platforms will use different options, but generally it looks something like this.
 
 Additionally, some processes are preferred over others, and I have broadly tried to follow recommendations for what is considered most secure to least. Some of these processes may be unfamiliar to you and i have tried to summarise these below. For more details there will be a separate guide coming out at some point in future.
+
+### Simplified process flow
+
+In a nutshell what this diagram is trying to say is that the system tries lots of options. Any of them could succeed and you get a page that lets you reset your password, but if none of them are available or work successfully then your only options are to try again or go down the account recovery process.
+
+```mermaid
+flowchart TD
+    start("Start")
+    fido("FIDO2 Process?")
+    passkey("Passkey Process?")
+    device("Trusted Device Process?")
+    otp("OTP Process?")
+    email("Email Process?")
+    phone("Phone Process?")
+    codes("Backup Codes Process?")
+    delegate("Delegate Process?")
+    questions("Secret Questions Process?")
+    oldpasswords("Old Passwords Process?")
+    none("None")
+    reset("Reset Password Page")
+    recover("Account Recovery Process")
+    endbox("End")
+
+    start --> fido
+    fido --"Success"--> reset
+    fido --"No"--> passkey
+    passkey --"Success"--> reset
+    passkey --"No"--> device
+    device --"Success"--> reset
+    device --"No"--> otp
+    otp --"Success"--> reset
+    otp --"No"--> email
+    email --"Success"--> reset
+    email --"No"--> phone
+    phone --"Success"--> reset
+    phone --"No"--> codes
+    codes --"Success"--> reset
+    codes --"No"--> delegate
+    delegate --"Success"--> endbox
+    delegate --"No"--> questions
+    questions --"Success"--> reset
+    questions --"No"--> oldpasswords
+    oldpasswords --"Success"--> reset
+    oldpasswords --"No"--> none
+    none --"Start Over?"--> start
+    none --> recover
+    reset --> endbox
+    recover --> endbox
+```
+
+### Full process flow
 
 ```mermaid
 flowchart TD
@@ -275,7 +326,7 @@ flowchart TD
 
 ## Further Details
 
-Further Details for each section of the above can be found below.
+Further Details for each section of the above can be found below. It's worth noting that some of the process flow diagrams look slightly different, this is because of complexities in how the code had to be arranged for the larger diagram causing it to render differently. Generally the individual process flows not only render quicker but are easier to read.
 
 1. [Yubikey / FIDO2](FIDO2.md)
-
+1. [Passkey](passkey.md)
