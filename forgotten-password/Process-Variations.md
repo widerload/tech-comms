@@ -332,3 +332,4 @@ Further Details for each section of the above can be found below. It's worth not
 1. [Passkey](passkey.md)
 1. [Trusted Device](trusted-device.md)
 1. [OTP](otp.md)
+1. [Email](email.md)
