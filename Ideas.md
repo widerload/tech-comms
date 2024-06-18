@@ -25,6 +25,7 @@ mindmap
             ("Anonymity")
             ("The Cloud")
             ("Encryption")
+            ("Biometrics")
         ("Security")
             ))"Threats"((
             ["Online Self Defense"]

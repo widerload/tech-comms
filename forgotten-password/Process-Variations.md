@@ -16,6 +16,7 @@ flowchart TD
     fido("FIDO2 Process?")
     passkey("Passkey Process?")
     device("Trusted Device Process?")
+    biometrics("Biometrics Process?")
     otp("OTP Process?")
     email("Email Process?")
     phone("Phone Process?")
@@ -34,7 +35,9 @@ flowchart TD
     passkey --"Success"--> reset
     passkey --"No"--> device
     device --"Success"--> reset
-    device --"No"--> otp
+    device --"No"--> biometrics
+    biometrics --"Success"--> reset
+    biometrics --"No"--> otp
     otp --"Success"--> reset
     otp --"No"--> email
     email --"Success"--> reset
