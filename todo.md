@@ -20,16 +20,16 @@
 
 ### Guides
 
-[ ] Choosing Authentication (Priority: / Dependencies: )
-[ ] The password is dead. Long live the Password Manager. (Priority: High / Dependencies: )
+[ ] Choosing Authentication (Priority: / Dependencies: Authentication)
+[ ] The password is dead. Long live the Password Manager. (Priority: High / Dependencies: Authentication, Password Manager)
+[ ] Forgotten Password & Account Recovery (Priority: High / Dependencies: Authentication, Platforms)
 [ ] Identity Profiles (Priority: Medium / Dependencies: )
-[ ] Personal Information (Priority: Medium / Dependencies: )
 [ ] Becoming hack resistant (Priority: Medium-High / Dependencies: Anti-virus, Authentication, Password Managers, Personal Information, Who Threatens You)
 [ ] Who threatens you (Priority: Medium / Dependencies: )
+[ ] Personal Information (Priority: Medium / Dependencies: )
 [ ] Misconceptions (Priority: Medium-High / Dependencies: )
 [ ] How the modern internet works (Priority: High / Dependencies: )
 [ ] What is the Cloud (Priority: Low / Dependencies: )
-[ ] Forgotten Password & Account Recovery (Priority: High / Dependencies: Authentication, Platforms)
 [ ] Backups
 
 ### Platforms
@@ -42,7 +42,7 @@
 
 [ ] Trusted Devices (Priority: High / Dependencies: Usernames & Passwords)
 [ ] OAuth (Priority: High / Dependencies: )
-[ ] MFA (Priority: High / Dependencies: )
+[ ] MFA (Priority: High / Dependencies: Usernames & Passwords)
 [ ] FIDO (Priority: Low / Dependencies: MFA)
 [ ] OTP (Priority: High / Dependencies: MFA)
 [ ] Biometrics (Priority: High / Dependencies: )

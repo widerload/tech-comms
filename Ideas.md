@@ -58,6 +58,7 @@ mindmap
 ```
 
 ### Original Diagram
+
 TODO: Move this out and delete it because its too crowded
 
 ```mermaid
@@ -111,13 +112,14 @@ mindmap
             ["don't"]
         ("Q&A")
             ("Why does messenger show random web pages sometimes?")
-            ("You dont need to log out of every app
+            ("You don't need to log out of every app
             Or turn every device off as soon as you have finished using it")
             ("What is CAPTCHA?")
         Reference
 ```
 
 ### List
+
 - Use Cases
   - HELP!
     - I Clicked the Link!
