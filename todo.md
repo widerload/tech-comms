@@ -40,17 +40,17 @@
 
 ### Authentication
 
-- [ ] Trusted Devices (Priority: High / Dependencies: Usernames & Passwords)
-- [ ] Device Approval (Priority: High / Dependencies: Usernames & Passwords)
-- [ ] OAuth (Priority: High / Dependencies: )
+- [X] Usernames & Passwords (Priority: High / Dependencies: )
+- [X] Machine Authentication (Priority: High / Dependencies: Usernames & Passwords)
 - [ ] MFA (Priority: High / Dependencies: Usernames & Passwords)
-- [ ] FIDO (Priority: Low / Dependencies: MFA)
+- [ ] Trusted Devices (Priority: High / Dependencies: Usernames & Passwords, Machine Authentication)
+- [ ] Device Approval (Priority: High / Dependencies: Usernames & Passwords, MFA)
+- [ ] OAuth (Priority: High / Dependencies: MFA, Machine Authentication)
 - [ ] OTP (Priority: High / Dependencies: MFA)
 - [ ] Biometrics (Priority: High / Dependencies: )
 - [ ] Link Authentication (Priority: Medium / Dependencies: )
-- [X] Usernames & Passwords (Priority: High / Dependencies: )
+- [ ] FIDO (Priority: Low / Dependencies: MFA)
 - [ ] CAPTCHA (Priority: Low / Dependencies: )
-- [ ] Machine Codes (Priority: Low / Dependencies: )
 
 ### Encryption
 
